@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    background-color: pink;
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+.header ul{
+    justify-content:space-between;
+    align-items: center;
+    
+    margin-left: 35%;
+
+
+}
+#logo{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 700;
+
+}
+#logo span{
+    color: brown;
+}
+.header ul li a{
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+div h3{
+  
+    font-weight: 400;
+    
+    margin-left: 30%;
+
+}
+h1{
+    margin-left: 35%;
+    margin-right: 30%;
+    padding: 0 35px;
+    margin-top: 10px;
+    color: brown;
+    font-weight: 700;
+    border: 2px solid brown;
+    border-radius: 30px;
+    cursor: pointer;
+}
+h1:hover{
+    background-color: brown;
+    color: white;
+}
+p{
+    margin-left: 30%;
+    color: brown;
+}
+
+.sections{
+    display: flex;
+    background-image: linear-gradient(to right, pink,white,pink);
+}
+#content{
+
+    width: 16%;
+    max-height: 70%;
+    
+    color: brown;
+    visibility: visible;
+    transition: 0.4s 0.4s;
+}
+#content.open{
+    visibility: hidden;
+}
+.main{
+    width: 66%;
+}
+#content2{
+    visibility: visible;
+}  
+#content2.open2{
+    visibility: hidden;
+}  
+
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.photos1, .photos2{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.photos1 img:hover{
+    cursor: pointer;
+    transform: rotate(15deg);
+    box-shadow:  10px 20px 65px orange;
+}
+.photos2{
+    margin-left: 20px
+
+
+}
+.photos2 img:hover{
+    cursor: pointer;
+    transform: rotate(15deg);
+    box-shadow:  10px 20px 65px orange;
+                
+}
+
+.footer{
+    height: 30%;
+    display: flex;
+    background-color: black;
+    color: white;
+}
+.col1{width: 30%;
+    color: white;
+
+}
+.col2{
+    width: 30%;
+    color: white;
+}
+.col3{
+    width: 30%;
+    color: white;
+}
+.products img{
+    width: 300px;
+
+}
+.sections #menu{
+    position: absolute;
+    left: 0;
+    
+}
+#list{
+    visibility: hidden;
+}
+#list.tap{
+    visibility: visible;
+}
+#list2{
+    visibility: hidden;
+}
+#list2.tap2{
+    visibility: visible;
+}
+
+
