@@ -60,13 +60,17 @@ p{
 }
 
 .sections{
-    display: flex;
+    display: grid;
+    width: 100%;
+    margin: 0 auto 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 1px;
     background-image: linear-gradient(to right, pink,white,pink);
 }
 #content{
 
     width: 16%;
-    max-height: 70%;
+    
     
     color: brown;
     visibility: visible;
@@ -75,9 +79,8 @@ p{
 #content.open{
     visibility: hidden;
 }
-.main{
-    width: 66%;
-}
+
+
 #content2{
     visibility: visible;
 }  
@@ -154,5 +157,110 @@ p{
 #list2.tap2{
     visibility: visible;
 }
+
+.full{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+}
+.full img{
+    width: 90%;
+    max-width: 500px;
+}
+.full span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 18px;
+    color: aliceblue;
+    cursor: pointer;
+}
+#asset, #trade, #hire{
+    color: black;
+    cursor: pointer;
+    border: 1px solid  black;
+    border-radius: 5px;
+    background-color: pink;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#hire:hover{
+    background-color: white;
+    color: pink;
+}
+#trade:hover{
+    background-color: white;
+    color: pink;
+}
+#asset:hover{
+    background-color: white;
+    color: pink;
+}
+#x1photos{
+    position: absolute;
+    top: 35%;
+    left: 7%;
+    visibility: hidden;
+    display: grid;
+    cursor: pointer;
+    justify-content: space-between;
+}
+#x1photos:hover{
+
+    box-shadow: 10px 10px 60px orange;
+    transition: 1s ease;
+    
+
+}
+#x1photos.flip{
+    visibility: visible;
+}
+#x1{
+    cursor: pointer;
+    color: brown;
+}
+#x1:hover{
+    background-color: white;
+    color: pink;
+    border-radius: 20px;
+}
+#x2photos{
+    position: absolute;
+    top: 35%;
+    left: 7%;
+    visibility: hidden;
+    display: grid;
+    cursor: pointer;
+    justify-content: space-between;
+}
+#x2photos:hover{
+    
+    box-shadow: 10px 10px 60px orange;
+    transition: 1s ease;
+    
+
+}
+#x2photos.flipp{
+    visibility: visible;
+}
+#x2{
+    cursor: pointer;
+    color: brown;
+}
+#x2:hover{
+    background-color: white;
+    color: pink;
+    border-radius: 20px;
+}
+
 
 

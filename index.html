@@ -39,8 +39,20 @@
             <li id="bmw"> <a href="#"> BMW</a></li>
             <div id="list">
         
-            <p>x1</p>
-            <p>x2</p>
+            <p id="x1">x1</p>
+        <div id="x1photos">
+            <img src="phtos/x1.jpg" width="100px" onclick="openFullImg(this.src)">
+            <img src="phtos/x1 1.jpg" width="100px" onclick="openFullImg(this.src)">
+            <img src="phtos/x1 2.jpg" width="100px" onclick="openFullImg(this.src)">
+            <img src="phtos/x1 3.jpg" width="100px" onclick="openFullImg(this.src)">
+        </div>
+            <p id="x2">x2</p>
+            <div id="x2photos">
+                <img src="phtos/x2.jpg" width="100px" onclick="openFullImg(this.src)">
+                <img src="phtos/x2 1.jpg" width="100px" onclick="openFullImg(this.src)">
+                <img src="phtos/x2 2.jpg" width="100px" onclick="openFullImg(this.src)">
+                <img src="phtos/x2 3.jpg" width="100px" onclick="openFullImg(this.src)">
+            </div>
             <p>x3</p>
             <p>x4</p>
             <p>x5</p>
@@ -71,63 +83,68 @@
             <li>VAUXHALL</li>
         </ul>
     </div>
+    <div class="full" id="fullBox">
+        <img src="phtos/toureg.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
     <div class="main">
         <h2>FEATURED CARS</h2>
         <div class="products">
             <div class="photos1">
-            <img src="phtos/benz.jpg" alt="">
-            
-
-
+                
+            <img src="phtos/benz.jpg" onclick="openFullImg(this.src)" >
             <p>Mercedes benz</p>
              <p>1800cc</p>
              <p>price: ksh 4.6m</p>
             
             
-            <img src="phtos/benz2.jpg" alt="">
+            <img src="phtos/benz2.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
-            <img src="phtos/crv.jpg" alt="">
+        
+        
+
+            <img src="phtos/crv.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz </p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
 
-            <img src="phtos/crv2.jpg" alt="">
+            <img src="phtos/crv2.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
-            <img src="phtos/pa.jpg" alt="">
+            <img src="phtos/pa.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
-            <img src="phtos/patrol 2.jpg" alt="">
+            <img src="phtos/patrol 2.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
         </div>
         <div class="photos2">
-            <img src="phtos/patrol.jpg" alt="">
+            <img src="phtos/patrol.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
-            <img src="phtos/prado.jpg" alt="">
+            <img src="phtos/prado.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
-            <img src="phtos/range 2.jpg" alt="">
+            <img src="phtos/range 2.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz/p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
-            <img src="phtos/range.jpg" alt=""> 
+            <img src="phtos/range.jpg"  onclick="openFullImg(this.src)"> 
                <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
-            <img src="phtos/toureg.jpg" alt="">
+            <img src="phtos/toureg.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
-            <img src="phtos/toureg2.jpg" alt="">
+            <img src="phtos/toureg2.jpg"  onclick="openFullImg(this.src)">
             <p>Mercedes benz</p>
             <p>1800cc</p>
             <p>price: ksh 4.6m</p>
@@ -141,9 +158,9 @@
         <h3>OUR EXCEMPLARY SERVICES</h3>
         
         <div class="services">
-            <p>Asset Financing</p>
-            <p>Trade In</p>
-            <p>Hire Purchase</p>
+            <p id="asset">Asset Financing</p>
+            <p id="trade">Trade In</p>
+            <p id="hire">Hire Purchase</p>
         </div>
         </div>
     </div>
@@ -198,6 +215,40 @@
 
     toyota.onclick=function(){
         list2.classList.toggle("tap2");
+    }
+    var fullBox=document.getElementById("fullBox");
+    var fullImg=document.getElementById("fullImg");
+    function openFullImg(picture){
+        fullBox.style.display="flex";
+        fullImg.src= picture;
+
+    }
+    function closeFullImg(){
+        fullBox.style.display=("none")
+    }
+var asset=document.getElementById("asset").onclick=function(){
+    document.getElementById("asset").innerHTML="Asset financing=>We partner with big banks like NCBA, COOP EQUITY"
+
+}
+let trade=document.getElementById("trade").onclick=function(){
+    document.getElementById("trade").innerHTML="Trade in=>Tired with your old car! we got you covered, you can upgrade your car by getting a newer car when you give us your old car and add little or no cash."
+
+
+}
+const hire=document.getElementById("hire").onclick=function(){
+    document.getElementById("hire").innerHTML="Hire purchase=>raise 50% deposit and walk away with your desired car. pay the remainder within a period of 3yrs at flexibe reducing balance rates of 13%per yr"
+}
+let x1=document.getElementById("x1");
+let x1photos=document.getElementById("x1photos");
+
+    x1.onclick=function(){
+        x1photos.classList.toggle("flip");
+    }
+let x2=document.getElementById("x2");
+let x2photos=document.getElementById("x2photos");
+let img=document.getElementsByTagName("img")
+    x2.onclick=function(){
+        x2photos.classList.toggle("flipp");
     }
 
 
